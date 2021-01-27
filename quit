@@ -1,0 +1,94 @@
+[33mcommit c01e1fbf63fd90bed65fb9dba08df4c36b685b6b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: kkeyan931 <65884897+kkeyan931@users.noreply.github.com>
+Date:   Wed Jan 27 10:57:14 2021 +0530
+
+    First Commit
+
+[1mdiff --git a/Capstone_Project.ipynb b/Capstone_Project.ipynb[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ab54037[m
+[1m--- /dev/null[m
+[1m+++ b/Capstone_Project.ipynb[m
+[36m@@ -0,0 +1,82 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m "cells": [[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "markdown",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "   # Data Science Capstone Project"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "markdown",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "### This NoteBook is used to build some Data Science Project"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "markdown",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "### Projects\n",[m
+[32m+[m[32m    "* Building a Project using Location Data from Four Square API\n",[m
+[32m+[m[32m    "* Clustering the Location Data"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 2,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "import pandas as pd\n",[m
+[32m+[m[32m    "import numpy as np"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": 3,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Hello Capstone Project Course\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "print(\"Hello Capstone Project Course\")"[m
+[32m+[m[32m   ][m
+[32m+[m[32m  },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": null,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [],[m
+[32m+[m[32m   "source": [][m
+[32m+[m[32m  }[m
+[32m+[m[32m ],[m
+[32m+[m[32m "metadata": {[m
+[32m+[m[32m  "kernelspec": {[m
+[32m+[m[32m   "display_name": "Python 3",[m
+[32m+[m[32m   "language": "python",[m
+[32m+[m[32m   "name": "python3"[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "language_info": {[m
+[32m+[m[32m   "codemirror_mode": {[m
+[32m+[m[32m    "name": "ipython",[m
+[32m+[m[32m    "version": 3[m
+[32m+[m[32m   },[m
+[32m+[m[32m   "file_extension": ".py",[m
+[32m+[m[32m   "mimetype": "text/x-python",[m
+[32m+[m[32m   "name": "python",[m
+[32m+[m[32m   "nbconvert_exporter": "python",[m
+[32m+[m[32m   "pygments_lexer": "ipython3",[m
+[32m+[m[32m   "version": "3.8.5"[m
+[32m+[m[32m  }[m
+[32m+[m[32m },[m
+[32m+[m[32m "nbformat": 4,[m
+[32m+[m[32m "nbformat_minor": 4[m
+[32m+[m[32m}[m
