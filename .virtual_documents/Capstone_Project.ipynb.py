@@ -283,4 +283,7 @@ toronto_merged.loc[toronto_merged['Cluster Labels'] == 3, toronto_merged.columns
 toronto_merged.loc[toronto_merged['Cluster Labels'] == 4, toronto_merged.columns[[1] + list(range(5, toronto_merged.shape[1]))]]
 
 
+get_ipython().getoutput("jupyter trust Capstone_Project.ipynb")
+
+
 
