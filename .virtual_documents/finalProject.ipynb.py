@@ -20,13 +20,14 @@ columns=["No","District","Code","Capital","Date_Of_Formation","Split_From","Area
 
 df=contents[1]
 df.columns=columns
+df.head()
 
 
 df.drop(columns=["No","Capital","Map"],inplace=True)
 df.Taluks=[i.split(" ") for i in df.Taluks] 
 df.Area=df.Area.astype(str)
 Area=df.Area.str.split("[",1).str[0].str.strip()
-Area=df1.str.replace(",","").str.strip()
+Area=Area.str.replace(",","").str.strip()
 df.Area=Area
 df.Area=df.Area.astype(float)
 
@@ -93,6 +94,30 @@ location = geolocator.geocode(address)
 latitude = location.latitude
 longitude = location.longitude
 print('The geograpical coordinate of Tamil Nadu are {}, {}.'.format(latitude, longitude))
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+df.plot.scatter("Area","Population")
+
+
+x=df["Area"]
+y=df["Population"]
+sns.regplot(x,y)
+
+
+df.corr()
+
+
+df.Population.plot.box()
+
+
+df.plot.bar("District","Population")
+
+
+
 
 
 map_TamilNadu = folium.Map(location=[latitude, longitude], zoom_start=6.4)
@@ -173,7 +198,27 @@ print(Tamilnadu_venues.shape)
 Tamilnadu_venues.head()
 
 
-Tamilnadu_venues.groupby('District').count()
+Tamilnadu_count=Tamilnadu_venues.groupby('District').count()
+
+
+Tamilnadu_count.head()
+
+
+Tamilnadu_count["Venue Category"].plot.bar()
+
+
+Tamilnadu_count.info()
+
+
+x=df[["District","Population"]]
+y=Tamilnadu_count
+xy_joined=x.join(y,on="District")[["District","Population","Venue Category"]]
+
+
+xy_joined.head()
+
+
+xy_joined.plot.scatter("Population","Venue Category")
 
 
 Tamilnadu_onehot = pd.get_dummies(Tamilnadu_venues[['Venue Category']], prefix="", prefix_sep="")
@@ -223,10 +268,26 @@ for ind in np.arange(Tamilnadu_grouped.shape[0]):
 District_venues_sorted.head()
 
 
+Tamilnadu_grouped_clustering = Tamilnadu_grouped.drop('District', 1)
+
+cost =[] 
+for i in range(1, 11): 
+    KM = KMeans(n_clusters = i, max_iter = 500) 
+    KM.fit(Tamilnadu_grouped_clustering) 
+      
+    # calculates squared error 
+    # for the clustered points 
+    cost.append(KM.inertia_)      
+  
+# plot the cost against K values 
+plt.plot(range(1, 11), cost, color ='g', linewidth ='3') 
+plt.xlabel("Value of K") 
+plt.ylabel("Sqaured Error (Cost)") 
+plt.show() # clear the plot 
+
+
 # set number of clusters
 kclusters = 5
-
-Tamilnadu_grouped_clustering = Tamilnadu_grouped.drop('District', 1)
 
 # run k-means clustering
 kmeans = KMeans(n_clusters=kclusters, random_state=0).fit(Tamilnadu_grouped_clustering)
@@ -279,6 +340,9 @@ map_clusters
 
 
 Tamilnadu_merged.loc[Tamilnadu_merged['Cluster Labels'] == 0, Tamilnadu_merged.columns[[0] + list(range(5, Tamilnadu_merged.shape[1]))]]
+
+
+
 
 
 Tamilnadu_merged.loc[Tamilnadu_merged['Cluster Labels'] == 1, Tamilnadu_merged.columns[[0] + list(range(5, Tamilnadu_merged.shape[1]))]]

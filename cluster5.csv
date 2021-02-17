@@ -1,0 +1,6 @@
+,District,Population,Population_Density,Taluks,Latitude,Longitude,Cluster Labels,1st Most Common Venue,2nd Most Common Venue,3rd Most Common Venue,4th Most Common Venue,5th Most Common Venue,6th Most Common Venue,7th Most Common Venue,8th Most Common Venue,9th Most Common Venue,10th Most Common Venue
+0,Ariyalur,754894,390,"['Andimadam', 'Ariyalur', 'Udayarpalayam', 'Sendurai']",11.076035950000001,79.11745538182738,5,,,,,,,,,,
+6,Dindigul,2159775,345,"['Athoor', 'Dindigul-West', 'Dindigul-East', 'Gujiliamparai', 'Kodaikanal', 'Natham', 'Nilakottai', 'Oddanchattiram', 'Palani', 'Vedasandur']",10.3303299,78.0673979084697,5,,,,,,,,,,
+18,Perambalur,565223,320,"['Alathur', 'Kunnam', 'Perambalur', 'Veppanthattai']",11.2287716,78.8182555496278,5,,,,,,,,,,
+35,Vellore,1614242,795,"['Anaicut', 'Gudiyatham', 'Pernambut', 'Katpadi', 'Kilvaithinankuppam', 'Vellore']",12.7948109,79.0006410968549,5,,,,,,,,,,
+37,Virudhunagar,1942288,453,"['Aruppukkottai', 'Kariapatti', 'Rajapalayam', 'Sattur', 'Sivakasi', 'Srivilliputhur', 'Tiruchuli', 'Virudhunagar', 'Watrap', 'Vembakottai']",9.5208936,77.8784563961865,5,,,,,,,,,,
